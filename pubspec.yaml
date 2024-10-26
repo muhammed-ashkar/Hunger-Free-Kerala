@@ -23,6 +23,10 @@ dependencies:
   hive_storage: ^0.0.3  # Storage for Hive
   hive_generator: ^2.0.1 # Code generation for Hive
   hive: ^2.2.3 # Core Hive package
+  intl: ^0.19.0
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+  path_provider: ^2.1.4
 
 dev_dependencies:
   flutter_test:
@@ -39,6 +43,10 @@ flutter:
   assets:
     - assets/images.jpg 
     - assets/onboarding.jpeg
+    - assets/home1.jpg
+    - assets/homeright1.jpeg
+    - assets/homeright2.jpeg
+    - assets/homeright3.jpeg
     # Uncomment and add more assets as needed
     # - images/a_dot_ham.jpeg
 

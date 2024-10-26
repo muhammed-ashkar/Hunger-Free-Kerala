@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';  // Import your LoginScreen
-import 'signup_screen.dart'; // Import your SignUp screen
+import 'home_screen.dart'; // Import your HomeScreen
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -14,45 +13,36 @@ class _OnboardingState extends State<Onboarding> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration:const BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/onboarding.jpeg'), // Replace with your actual image path
-            fit: BoxFit.cover, // Options: cover, contain, fill, etc.
-            alignment: Alignment.center, // Align the image center
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
           ),
         ),
         child: Stack(
           children: [
-            // Buttons
+            // Home button
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        // Navigate to Sign Up
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const SignUp()),
-                        );
-                      },
-                      child: const Text('Sign Up'),
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Navigate to HomeScreen
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    );
+                  },
+                  child: const Text('Home'),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 32.0,
+                      vertical: 12.0,
                     ),
-                    const SizedBox(height: 16),
-                    OutlinedButton(
-                      onPressed: () {
-                        // Navigate to Login Screen
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const LoginScreen()),
-                        );
-                      },
-                      child: const Text('Sign In'),
-                    ),
-                  ],
+                    textStyle: const TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
             ),
