@@ -41,7 +41,6 @@ flutter:
 
   # Assets section to include images and other resources
   assets:
-    - assets/images.jpg 
     - assets/onboarding.jpeg
     - assets/home1.jpg
     - assets/homeright1.jpeg

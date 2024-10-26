@@ -14,8 +14,11 @@ class _OnboardingState extends State<Onboarding> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/onboarding.jpeg'), // Replace with your actual image path
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
             fit: BoxFit.cover,
             alignment: Alignment.center,
           ),
